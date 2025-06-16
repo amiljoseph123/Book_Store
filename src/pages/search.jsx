@@ -2,30 +2,33 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./search.css";
 
-function SearchPage() {
+function Search() {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
-  const handleSearch = async () => {
+  const handleSearch = () => {
     if (query.trim()) {
-      // Ideally you'd fetch here first or just navigate with the search term
       navigate(`/book/${query}`);
     }
   };
 
   return (
-    <div>
-      <input 
-        type="text" 
-        placeholder="Search for a book..." 
-        value={query} 
-        onChange={(e) => setQuery(e.target.value)} 
-      />
-      <button onClick={handleSearch}>
-        Search
-      </button>
+    <div className="search-wrapper">
+      <h1>Book Finder</h1>
+      <p>Search for your favorite books and view details instantly</p>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Enter book title"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button onClick={handleSearch}>
+          Search
+        </button>
+      </div>
     </div>
   )
 }
 
-export default SearchPage;
+export default Search;
