@@ -8,7 +8,7 @@ function Search() {
 
   const handleSearch = () => {
     if (query.trim()) {
-      navigate(`/book/${query}`);
+      navigate(`/search/${query}`);
     }
   };
 

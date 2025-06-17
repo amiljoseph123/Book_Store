@@ -1,0 +1,33 @@
+.results-wrapper {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.results-wrapper h1 {
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.results-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results-wrapper ul li {
+  margin-bottom: 10px;
+  background: #ffece9;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.results-wrapper ul li a {
+  text-decoration: none;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.results-wrapper ul li:hover {
+  background: #ff9679;
+  transform: translateX(5px);
+}
